@@ -70,26 +70,25 @@ and properly initialized.
   You can use this information to generate own server or client stubs for HTTP API, or documentation for them.
 
 1. For generating typed API we need an access to types, described in RAML files. Let's modify our test.js to enumerate all the types from RAML file:
-```
-api.types().forEach(function (type) {
-	console.log(type.name());
+  ```
+  api.types().forEach(function (type) {
+  	console.log(type.name());
 
-	type.properties().forEach(function(prop) {
-		console.log("\t", prop.name());
-	});
-});
-```
+  	type.properties().forEach(function(prop) {
+  		console.log("\t", prop.name());
+  	});
+  });
+  ```
 
-this should enumerate all types' names properties.
+  this should enumerate all types' names properties.
 
 1. About an every object in RAML 1.0 (type, property, request, method, response) can have an array of annotations, associated with it. These annotations can describe additional info, associated with the object. For example, here how we can enumerate all annotations on all types:
+  ```
+  api.types().forEach(function (type) {
+  	console.log(type.name());
 
-```
-api.types().forEach(function (type) {
-	console.log(type.name());
-
-	type.properties().forEach(function(prop) {
-		console.log("\t", prop.name());
-	});
-});
-```
+  	type.properties().forEach(function(prop) {
+  		console.log("\t", prop.name());
+  	});
+  });
+  ```
