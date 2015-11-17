@@ -81,14 +81,3 @@ and properly initialized.
   ```
 
   this should enumerate all types' names properties.
-
-1. About an every object in RAML 1.0 (type, property, request, method, response) can have an array of annotations, associated with it. These annotations can describe additional info, associated with the object. For example, here how we can enumerate all annotations on all types:
-  ```
-  api.types().forEach(function (type) {
-  	console.log(type.name());
-
-  	type.properties().forEach(function(prop) {
-  		console.log("\t", prop.name());
-  	});
-  });
-  ```
