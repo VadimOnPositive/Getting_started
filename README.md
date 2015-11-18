@@ -13,18 +13,19 @@ This document is intended to learn you how to use RAML 1.0 JavaScript parser.
 
 ###	RAML 1.0 JavaScript parser installation
 1. Create package.json file which should contain at least a dependency to raml-js-parser NodeJS module:
-  ```
+  ```json
   {
     "name": "myParserTest",
-    "dependencies": {
-      "raml-1-0-parser": "https://github.com/raml-org/raml-js-parser-2",
-      "typescript": "*"
-    }
+      "dependencies":
+      {
+        "raml-1-0-parser": "https://github.com/raml-org/raml-js-parser-2",
+        "typescript": "*"
+      }
   }
   ```
-1.	Use your favorite text editor to create JavaScript file (name it, f.e. test.js):
+1.	Use your favorite text editor to create JavaScript file test.js:
 
-	```
+	```js
 	var raml = require("raml-1-0-parser");
 	```
 
@@ -36,7 +37,7 @@ and properly initialized.
 ## Loading RAML files and using RAML JS API to analyze them
 
 1. Edit your test.js file to include RAML file loading:
-  ```
+  ```js
   var raml = require("raml-1-0-parser");
   var fs = require("fs");
   var path = require("path");
@@ -44,13 +45,13 @@ and properly initialized.
   var fName = path.resolve(__dirname + "/node_modules/raml-1-0-parser/raml-specs/XKCD/api.raml");
   var api = raml.loadApi(fName).getOrThrow();
   ```
-  Note that we specified a path to sample RAML file that is included in raml-js-parser. You might want to specify your own RAML file here. To do this, create your RAML 1.0 file using Atom editor with installed [apiworkbench plugin](http://apiworkbench.com/docs/), then save your RAML file and its dependencies somewhere and enter this file's path into test.js code.
+  Note that we specified a path to sample RAML file that is included in raml-js-parser. You might want to specify your own RAML file here. To do this, create your RAML 1.0 file using Atom editor with installed [apiworkbench plugin](http://apiworkbench.com/), then save your RAML file and its dependencies somewhere and enter this file's path into test.js code.
 
 1. Run ```nodejs test.js``` again. If you see no errors in output - your file was parsed successfully.
 
 1. Now, let's enumerate all the requests RAML file contains. For that, let's add the following code into test.js:
 
-  ```
+  ```js
   api.resources().forEach(function (resource) {
   	resource.methods().forEach(function (method) {
   		method.responses().forEach(function (resp) {
@@ -70,7 +71,7 @@ and properly initialized.
   You can use this information to generate own server or client stubs for HTTP API, or documentation for them.
 
 1. For generating typed API we need an access to types, described in RAML files. Let's modify our test.js to enumerate all the types from RAML file:
-  ```
+  ```js
   api.types().forEach(function (type) {
   	console.log(type.name());
 
