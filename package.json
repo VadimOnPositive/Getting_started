@@ -1,0 +1,7 @@
+{
+  "name": "myParserTest",
+  "dependencies": {
+    "raml-1-0-parser": "https://github.com/raml-org/raml-js-parser-2",
+    "typescript": "*"
+  }
+}

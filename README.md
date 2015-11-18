@@ -57,26 +57,68 @@ and properly initialized.
 
 ## Working with real RAML projects.
 
+1. First, let's checkout more complex RAML project from GIT. For our experiments we will use Box sample that could be downloaded from the [github](https://github.com/raml-apis/Box).
+  For this, checkout Raml1.0 project from the site:
+  ```
+  git clone https://github.com/raml-apis/Box.git
+  cd Box
+  git checkout -b raml1.0 origin/raml1.0
+  ```
+
 1. Now, let's enumerate all the requests RAML file contains. For that, let's add the following code into test.js:
 
   ```js
-  api.resources().forEach(function (resource) {
-  	resource.methods().forEach(function (method) {
-  		method.responses().forEach(function (resp) {
-  			console.log("\t",
-  				resource.relativeUri().value(),
-  				method.method(),
-  				resp.code().value());
-  		});
-  	});
-  });
+  var raml = require("raml-1-0-parser");
+
+  var fs = require("fs");
+  var path = require("path");
+
+  // Here we create a file name to be loaded
+  // var fName = path.resolve(__dirname + "/node_modules/raml-1-0-parser/raml-specs/XKCD/api.raml");
+  var fName = path.resolve("e:/git/Box/boxAPI.raml");
+
+  // Parse our RAML file with all the dependencies
+  var api = raml.loadApi(fName).getOrThrow();
+
+  /**
+   * Process resource (here we just trace different paramters of URL)
+   **/
+  function processResource(res) {
+  	console.log("======================================");
+
+  	// User-friendly name (if provided)
+  	if (res.displayName()) {
+  		console.log(res.displayName());
+  	}
+
+  	// Trace resource's relative URI
+  	var relativeUri = res.relativeUri().value();
+  	// Next method returns full relative URI (which is equal with previous one
+  	// for top-level resources, but for subresources it returns full path from the
+  	// resources base URL)
+  	var completeRelativeUri = res.completeRelativeUri();
+  	// trace both of them
+  	console.log(completeRelativeUri, "(", relativeUri, ")");
+
+  	// Let's enumerate all URI parameters
+  	for (var uriParamNum = 0; uriParamNum < res.allUriParameters().length; ++uriParamNum) {
+  		var uriParam = res.allUriParameters()[uriParamNum];
+  		// Here we trace URI parameter's name and types
+  		console.log("\tURI Parameter:", uriParam.name(), uriParam.type().join(","));
+  	}
+
+  	// Recursive call this function for all subresources
+  	for (var subResNum = 0; subResNum < res.resources().length; ++subResNum) {
+  		var subRes = res.resources()[subResNum];
+  		processResource(subRes);
+  	}
+  }
+
+  // Enumerate all the resources
+  for (var resNum = 0; resNum < api.resources().length; ++resNum) {
+  	processResource(api.resources()[resNum]);
+  }
   ```
-  In this code, we enumerate all resources, all methods inside each of them, and all the response codes that could be returned by any of methods. Let's run the resulting file and see what it returns:
-  ```
-  /{comicId}/info.0.json get 200
-  /info.0.json get 200
-  ```
-  You can use this information to generate own server or client stubs for HTTP API, or documentation for them.
 
 1. For generating typed API we need an access to types, described in RAML files. Let's modify our test.js to enumerate all the types from RAML file:
   ```js

@@ -1,0 +1,148 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files (x86)\\nodejs\\\\node.exe',
+1 verbose cli   'C:\\Program Files (x86)\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'install' ]
+2 info using npm@2.11.3
+3 info using node@v0.12.7
+4 verbose readDependencies loading dependencies from e:\OnPositive\getting_started\Getting_started\package.json
+5 warn package.json myParserTest@ No repository field.
+6 warn package.json myParserTest@ No license field.
+7 verbose install where, deps [ 'e:\\OnPositive\\getting_started\\Getting_started',
+7 verbose install   [ 'raml-1-0-parser', 'typescript', 'box-api' ] ]
+8 verbose install where, peers [ 'e:\\OnPositive\\getting_started\\Getting_started', [] ]
+9 verbose installManyTop reading for lifecycle e:\OnPositive\getting_started\Getting_started\package.json
+10 info preinstall myParserTest@
+11 verbose installManyTop reading scoped package data from e:\OnPositive\getting_started\Getting_started\node_modules\raml-1-0-parser\package.json
+12 verbose installManyTop reading scoped package data from e:\OnPositive\getting_started\Getting_started\node_modules\typescript\package.json
+13 verbose readDependencies loading dependencies from e:\OnPositive\getting_started\Getting_started\package.json
+14 verbose targetResolver reading package data from e:\OnPositive\getting_started\Getting_started\node_modules\raml-1-0-parser\package.json
+15 verbose targetResolver reading package data from e:\OnPositive\getting_started\Getting_started\node_modules\typescript\package.json
+16 verbose targetResolver reading package data from e:\OnPositive\getting_started\Getting_started\node_modules\.bin\tsc\package.json
+17 verbose targetResolver reading package data from e:\OnPositive\getting_started\Getting_started\node_modules\.bin\tsc.cmd\package.json
+18 verbose targetResolver reading package data from e:\OnPositive\getting_started\Getting_started\node_modules\.bin\tsserver\package.json
+19 verbose targetResolver reading package data from e:\OnPositive\getting_started\Getting_started\node_modules\.bin\tsserver.cmd\package.json
+20 silly cache add args [ 'box-api@git+https://github.com/raml-apis/Box.git', null ]
+21 verbose cache add spec box-api@git+https://github.com/raml-apis/Box.git
+22 silly cache add args [ 'raml-1-0-parser@git+https://github.com/raml-org/raml-js-parser-2.git',
+22 silly cache add   null ]
+23 verbose cache add spec raml-1-0-parser@git+https://github.com/raml-org/raml-js-parser-2.git
+24 verbose already installed skipping typescript@* e:\OnPositive\getting_started\Getting_started
+25 silly cache add parsed spec { raw: 'box-api@git+https://github.com/raml-apis/Box.git',
+25 silly cache add   scope: null,
+25 silly cache add   name: 'box-api',
+25 silly cache add   rawSpec: 'git+https://github.com/raml-apis/Box.git',
+25 silly cache add   spec: 'git+https://github.com/raml-apis/Box.git',
+25 silly cache add   type: 'hosted',
+25 silly cache add   hosted:
+25 silly cache add    { type: 'github',
+25 silly cache add      ssh: 'git@github.com:raml-apis/Box.git',
+25 silly cache add      sshUrl: 'git+ssh://git@github.com/raml-apis/Box.git',
+25 silly cache add      httpsUrl: 'git+https://github.com/raml-apis/Box.git',
+25 silly cache add      gitUrl: 'git://github.com/raml-apis/Box.git',
+25 silly cache add      shortcut: 'github:raml-apis/Box',
+25 silly cache add      directUrl: 'https://raw.githubusercontent.com/raml-apis/Box/master/package.json' } }
+26 verbose addRemoteGit caching git+https://github.com/raml-apis/Box.git
+27 verbose addRemoteGit git+https://github.com/raml-apis/Box.git is a repository hosted by github
+28 silly tryClone cloning git+https://github.com/raml-apis/Box.git via git+https://github.com/raml-apis/Box.git
+29 verbose tryClone https-github-com-raml-apis-Box-git-5890656e not in flight; caching
+30 silly cache add parsed spec { raw: 'raml-1-0-parser@git+https://github.com/raml-org/raml-js-parser-2.git',
+30 silly cache add   scope: null,
+30 silly cache add   name: 'raml-1-0-parser',
+30 silly cache add   rawSpec: 'git+https://github.com/raml-org/raml-js-parser-2.git',
+30 silly cache add   spec: 'git+https://github.com/raml-org/raml-js-parser-2.git',
+30 silly cache add   type: 'hosted',
+30 silly cache add   hosted:
+30 silly cache add    { type: 'github',
+30 silly cache add      ssh: 'git@github.com:raml-org/raml-js-parser-2.git',
+30 silly cache add      sshUrl: 'git+ssh://git@github.com/raml-org/raml-js-parser-2.git',
+30 silly cache add      httpsUrl: 'git+https://github.com/raml-org/raml-js-parser-2.git',
+30 silly cache add      gitUrl: 'git://github.com/raml-org/raml-js-parser-2.git',
+30 silly cache add      shortcut: 'github:raml-org/raml-js-parser-2',
+30 silly cache add      directUrl: 'https://raw.githubusercontent.com/raml-org/raml-js-parser-2/master/package.json' } }
+31 verbose addRemoteGit caching git+https://github.com/raml-org/raml-js-parser-2.git
+32 verbose addRemoteGit git+https://github.com/raml-org/raml-js-parser-2.git is a repository hosted by github
+33 silly tryClone cloning git+https://github.com/raml-org/raml-js-parser-2.git via git+https://github.com/raml-org/raml-js-parser-2.git
+34 verbose tryClone https-github-com-raml-org-raml-js-parser-2-git-0bdf40b0 not in flight; caching
+35 info git [ 'config', '--get', 'remote.origin.url' ]
+36 info git [ 'config', '--get', 'remote.origin.url' ]
+37 silly validateExistingRemote git+https://github.com/raml-apis/Box.git remote.origin.url: https://github.com/raml-apis/Box.git
+38 verbose validateExistingRemote git+https://github.com/raml-apis/Box.git is updating existing cached remote C:\Users\Vadim\AppData\Roaming\npm-cache\_git-remotes\https-github-com-raml-apis-Box-git-5890656e
+39 silly validateExistingRemote git+https://github.com/raml-org/raml-js-parser-2.git remote.origin.url: https://github.com/raml-org/raml-js-parser-2.git
+40 verbose validateExistingRemote git+https://github.com/raml-org/raml-js-parser-2.git is updating existing cached remote C:\Users\Vadim\AppData\Roaming\npm-cache\_git-remotes\https-github-com-raml-org-raml-js-parser-2-git-0bdf40b0
+41 info git [ 'fetch', '-a', 'origin' ]
+42 info git [ 'fetch', '-a', 'origin' ]
+43 verbose updateRemote git fetch -a origin (https://github.com/raml-org/raml-js-parser-2.git)
+44 verbose setPermissions git+https://github.com/raml-org/raml-js-parser-2.git skipping chownr on Windows
+45 verbose resolveHead git+https://github.com/raml-org/raml-js-parser-2.git original treeish: master
+46 verbose updateRemote git fetch -a origin (https://github.com/raml-apis/Box.git)
+47 verbose setPermissions git+https://github.com/raml-apis/Box.git skipping chownr on Windows
+48 verbose resolveHead git+https://github.com/raml-apis/Box.git original treeish: master
+49 info git [ 'rev-list', '-n1', 'master' ]
+50 silly resolveHead git+https://github.com/raml-org/raml-js-parser-2.git resolved treeish: cdd2a46f0468b8c2f7a2e1d79f7062f7fd2ed85a
+51 verbose resolveHead git+https://github.com/raml-org/raml-js-parser-2.git resolved Git URL: git+https://github.com/raml-org/raml-js-parser-2.git#cdd2a46f0468b8c2f7a2e1d79f7062f7fd2ed85a
+52 silly resolveHead Git working directory: C:\Users\Vadim\AppData\Local\Temp\npm-11256-30258284\git-cache-a97e99927381\cdd2a46f0468b8c2f7a2e1d79f7062f7fd2ed85a
+53 info git [ 'rev-list', '-n1', 'master' ]
+54 silly resolveHead git+https://github.com/raml-apis/Box.git resolved treeish: 32b1ad7f52ddbd69f89772d294fbe148847d1dde
+55 verbose resolveHead git+https://github.com/raml-apis/Box.git resolved Git URL: git+https://github.com/raml-apis/Box.git#32b1ad7f52ddbd69f89772d294fbe148847d1dde
+56 silly resolveHead Git working directory: C:\Users\Vadim\AppData\Local\Temp\npm-11256-30258284\git-cache-72cb8f803891\32b1ad7f52ddbd69f89772d294fbe148847d1dde
+57 info git [ 'clone',
+57 info git   'C:\\Users\\Vadim\\AppData\\Roaming\\npm-cache\\_git-remotes\\https-github-com-raml-org-raml-js-parser-2-git-0bdf40b0',
+57 info git   'C:\\Users\\Vadim\\AppData\\Local\\Temp\\npm-11256-30258284\\git-cache-a97e99927381\\cdd2a46f0468b8c2f7a2e1d79f7062f7fd2ed85a' ]
+58 info git [ 'clone',
+58 info git   'C:\\Users\\Vadim\\AppData\\Roaming\\npm-cache\\_git-remotes\\https-github-com-raml-apis-Box-git-5890656e',
+58 info git   'C:\\Users\\Vadim\\AppData\\Local\\Temp\\npm-11256-30258284\\git-cache-72cb8f803891\\32b1ad7f52ddbd69f89772d294fbe148847d1dde' ]
+59 verbose cloneResolved git+https://github.com/raml-apis/Box.git clone Cloning into 'C:\Users\Vadim\AppData\Local\Temp\npm-11256-30258284\git-cache-72cb8f803891\32b1ad7f52ddbd69f89772d294fbe148847d1dde'...
+59 verbose cloneResolved done.
+60 info git [ 'checkout', '32b1ad7f52ddbd69f89772d294fbe148847d1dde' ]
+61 verbose checkoutTreeish git+https://github.com/raml-apis/Box.git checkout Note: checking out '32b1ad7f52ddbd69f89772d294fbe148847d1dde'.
+61 verbose checkoutTreeish
+61 verbose checkoutTreeish You are in 'detached HEAD' state. You can look around, make experimental
+61 verbose checkoutTreeish changes and commit them, and you can discard any commits you make in this
+61 verbose checkoutTreeish state without impacting any branches by performing another checkout.
+61 verbose checkoutTreeish
+61 verbose checkoutTreeish If you want to create a new branch to retain commits you create, you may
+61 verbose checkoutTreeish do so (now or later) by using -b with the checkout command again. Example:
+61 verbose checkoutTreeish
+61 verbose checkoutTreeish   git checkout -b new_branch_name
+61 verbose checkoutTreeish
+61 verbose checkoutTreeish HEAD is now at 32b1ad7... Initial commit
+62 error addLocal Could not install C:\Users\Vadim\AppData\Local\Temp\npm-11256-30258284\git-cache-72cb8f803891\32b1ad7f52ddbd69f89772d294fbe148847d1dde
+63 verbose cloneResolved git+https://github.com/raml-org/raml-js-parser-2.git clone Cloning into 'C:\Users\Vadim\AppData\Local\Temp\npm-11256-30258284\git-cache-a97e99927381\cdd2a46f0468b8c2f7a2e1d79f7062f7fd2ed85a'...
+63 verbose cloneResolved done.
+64 info git [ 'checkout', 'cdd2a46f0468b8c2f7a2e1d79f7062f7fd2ed85a' ]
+65 verbose checkoutTreeish git+https://github.com/raml-org/raml-js-parser-2.git checkout Note: checking out 'cdd2a46f0468b8c2f7a2e1d79f7062f7fd2ed85a'.
+65 verbose checkoutTreeish
+65 verbose checkoutTreeish You are in 'detached HEAD' state. You can look around, make experimental
+65 verbose checkoutTreeish changes and commit them, and you can discard any commits you make in this
+65 verbose checkoutTreeish state without impacting any branches by performing another checkout.
+65 verbose checkoutTreeish
+65 verbose checkoutTreeish If you want to create a new branch to retain commits you create, you may
+65 verbose checkoutTreeish do so (now or later) by using -b with the checkout command again. Example:
+65 verbose checkoutTreeish
+65 verbose checkoutTreeish   git checkout -b new_branch_name
+65 verbose checkoutTreeish
+65 verbose checkoutTreeish HEAD is now at cdd2a46... getKind() method for Wrapper Elements
+66 verbose addLocalDirectory C:\Users\Vadim\AppData\Roaming\npm-cache\raml-1-0-parser\0.1.0\package.tgz not in flight; packing
+67 verbose tar pack [ 'C:\\Users\\Vadim\\AppData\\Roaming\\npm-cache\\raml-1-0-parser\\0.1.0\\package.tgz',
+67 verbose tar pack   'C:\\Users\\Vadim\\AppData\\Local\\Temp\\npm-11256-30258284\\git-cache-a97e99927381\\cdd2a46f0468b8c2f7a2e1d79f7062f7fd2ed85a' ]
+68 verbose tarball C:\Users\Vadim\AppData\Roaming\npm-cache\raml-1-0-parser\0.1.0\package.tgz
+69 verbose folder C:\Users\Vadim\AppData\Local\Temp\npm-11256-30258284\git-cache-a97e99927381\cdd2a46f0468b8c2f7a2e1d79f7062f7fd2ed85a
+70 verbose addLocalTarball adding from inside cache C:\Users\Vadim\AppData\Roaming\npm-cache\raml-1-0-parser\0.1.0\package.tgz
+71 verbose addRemoteGit data._from: git+https://github.com/raml-org/raml-js-parser-2.git
+72 verbose addRemoteGit data._resolved: git+https://github.com/raml-org/raml-js-parser-2.git#cdd2a46f0468b8c2f7a2e1d79f7062f7fd2ed85a
+73 silly cache afterAdd raml-1-0-parser@0.1.0
+74 verbose afterAdd C:\Users\Vadim\AppData\Roaming\npm-cache\raml-1-0-parser\0.1.0\package\package.json not in flight; writing
+75 verbose afterAdd C:\Users\Vadim\AppData\Roaming\npm-cache\raml-1-0-parser\0.1.0\package\package.json written
+76 verbose stack Error: EISDIR, read
+76 verbose stack     at Error (native)
+77 verbose cwd e:\OnPositive\getting_started\Getting_started
+78 error Windows_NT 6.3.9600
+79 error argv "C:\\Program Files (x86)\\nodejs\\\\node.exe" "C:\\Program Files (x86)\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install"
+80 error node v0.12.7
+81 error npm  v2.11.3
+82 error code EISDIR
+83 error errno -4068
+84 error EISDIR, read
+85 error If you need help, you may report this error at:
+85 error     <https://github.com/npm/npm/issues>
+86 verbose exit [ -4068, true ]
