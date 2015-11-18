@@ -2,6 +2,6 @@
   "name": "myParserTest",
   "dependencies": {
     "raml-1-0-parser": "https://github.com/raml-org/raml-js-parser-2",
-    "typescript": "*"
+    "typescript": "*" // This line is temporary and required only to workaround a bug. Will be removed soon.
   }
 }
