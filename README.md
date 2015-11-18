@@ -19,13 +19,14 @@ This document is intended to learn you how to use RAML 1.0 JavaScript parser.
       "dependencies":
       {
         "raml-1-0-parser": "https://github.com/raml-org/raml-js-parser-2",
-        "typescript": "*"
+        "typescript": "*" // This line is temporary and required only to workaround a bug. Will be removed soon.
       }
   }
   ```
-1.	Use your favorite text editor to create JavaScript file test.js:
+1.	Use your favorite text editor to create test.js JavaScript file:
 
 	```js
+  // step1
 	var raml = require("raml-1-0-parser");
 	```
 
@@ -38,11 +39,14 @@ and properly initialized.
 
 1. Edit your test.js file to include RAML file loading:
   ```js
-  var raml = require("raml-1-0-parser");
+  // step2
   var fs = require("fs");
   var path = require("path");
 
+  // Here we create a file name to be loaded
   var fName = path.resolve(__dirname + "/node_modules/raml-1-0-parser/raml-specs/XKCD/api.raml");
+
+  // Parse our RAML file with all the dependencies
   var api = raml.loadApi(fName).getOrThrow();
   ```
   Note that we specified a path to sample RAML file that is included in raml-js-parser. You might want to specify your own RAML file here. To do this, create your RAML 1.0 file using Atom editor with installed [apiworkbench plugin](http://apiworkbench.com/), then save your RAML file and its dependencies somewhere and enter this file's path into test.js code.
